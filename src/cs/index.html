@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>2019年消防考试预报名系统</title>
+    <script src="https://tui.jianxuejy.com/public/jq-1.9.1.min.js"></script>
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        $(function () {
+            //倒计时js开始
+            var mydate = new Date();
+            $(".month").html(mydate.getMonth() + 1)
+            $(".day").html(mydate.getDate())
+
+        });
+    </script>
+    <script type="text/javascript" src="js/time.js"></script>
+    <script type="text/javascript" src="js/mydate.js"></script>
+</head>
+<body>
+<div class="topp">
+    <img src="images/toptb.png"/>
+</div>
+<div class="dh tjform">
+    <div class="dh1">
+        <ul>
+            <li class="p4"><a>申请须知</a></li>
+            <li class="p1" style="background:#545454"><a>团报申请系统</a></li>
+        </ul>
+        <span><a href="index.html">[返回主菜单]</a></span>
+    </div>
+</div>
+<div class="page1">
+    <div class="shijian">
+        <div id="showtime"></div>
+    </div>
+    <h1>提醒：本批次报名即将截止，内部企业集体报名通道将于<span style="font-weight:bold;"><span class="month"></span>月<span
+        class="day"></span>日</span><span style=" color:red;">23:59 </span>关闭！！！</h1>
+    <form name="messageForm" method="post" action="/message.action" id="messageForm1">
+        <table width="980" border="0" bgcolor="#666666" cellpadding="0" cellspacing="1"
+               style="line-height:40px; margin:0 auto;">
+            <input type="hidden" name="msg.field1" class="enterinput" id="field1"/>
+            <input type="hidden" name="msg.remark" class="enterinput" id="remark" value="学籍注册张册"/>
+            <input type="hidden" value="" name="msg.email" id="email"/>
+            <input type="hidden" value="北京分校" name="msg.school_code" id="schoolCode"/>
+            <input type="hidden" value="北京自考" name="msg.project_code"/>
+            <input type="hidden" value="学籍注册张册" name="msg.message_type"/>
+            <input type="hidden" name="msg.field3"/>
+            <input type="hidden" value="http://i.sunlands.com/portal-war/message.action" id="msgUrl"/>
+            <tbody>
+            <tr>
+                <td height="53" colspan="5" align="center" bgcolor="#313131"><p
+                    style="font-family:'微软雅黑'; font-size:24px; color:#fff; font-weight:bold;">团报名额查询</p>
+            </tr>
+            <tr>
+                <td width="104" align="center" bgcolor="#FFFFFF"><p>地区</p></td>
+                <td width="232" align="center" bgcolor="#FFFFFF"><select
+                    style="background-color:#fff; width:160px; height:26px; line-height:26px;">
+                    <option>重庆</option>
+                    <option>长沙</option>
+                    <option>吉林</option>
+                    <option>河南</option>
+                    <option>广州</option>
+                    <option>深圳</option>
+                    <option>杭州</option>
+                    <option>南京</option>
+                </select></td>
+                <td width="215" align="center" bgcolor="#FFFFFF"><p>时间</p></td>
+                <td width="254" align="center" bgcolor="#FFFFFF"><input type="text" name="starttime"
+                                                                        onfocus="MyCalendar.SetDate(this)"
+                                                                        value="请选择截止日期"
+                                                                        style="width:160px;height:20px;line-height:20px;"/>
+                </td>
+                <td width="169" align="center" bgcolor="#FFFFFF"><p
+                    style="width:140px;height:30px;background:#ae000a;color:#fff;line-height:30px;cursor:pointer;">
+                    查询</p></td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td colspan="3" align="center" bgcolor="#FFFFFF">总名额：100<span
+                    style="font-weight:bold;color:red;"></span></td>
+                <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td colspan="3" align="center" bgcolor="#FFFFFF">已申请名额：97</td>
+                <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td colspan="3" align="center" bgcolor="#FFFFFF"><span style="color:red;">剩余名额：3</span></td>
+                <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="5" align="center" bgcolor="#313131"><p style="color:#fff;font-size:24px;font-weight:bold;">
+                    消防课程团报申请表</p></td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="#FFFFFF"><p><span style="color:red;">*</span>姓名</p></td>
+                <td align="center" bgcolor="#FFFFFF">
+                    <input type="text" style="background-color:#fff;width:160px;height:20px; line-height:20px;" class="username"/>
+                </td>
+                <td align="center" bgcolor="#FFFFFF"><p>性别</p></td>
+                <td align="center" bgcolor="#FFFFFF"><select
+                    style="background-color:#fff; width:160px; height:26px; line-height:26px;">
+                    <option>男</option>
+                    <option>女</option>
+                </select></td>
+                <td width="169" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="#FFFFFF"><p>证件类型</p></td>
+                <td align="center" bgcolor="#FFFFFF"><select name="msg.field4"
+                                                             style="background-color:#fff; width:160px; height:26px; line-height:26px;">
+                    <option>居民身份证</option>
+                    <option>港澳台身份证</option>
+                    <option>华侨身份证（无身份证可填护照）</option>
+                    <option>其他</option>
+                </select></td>
+                <td align="center" bgcolor="#FFFFFF"><p><span style="color:red;">*</span>证件号码</p></td>
+                <td align="center" bgcolor="#FFFFFF"><input type="text"
+                                                            style="background-color:#fff;width:160px;height:20px; line-height:20px;" class="idcard"/>
+                </td>
+                <td width="169" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="32" align="center" bgcolor="#FFFFFF"><span style="color:red;">*</span>手机号码</td>
+                <td height="32" align="center" bgcolor="#FFFFFF">
+                    <input type="text" placeholder="" style="background-color:#fff;width:160px;height:20px; line-height:20px;" maxlength="11" class="yxCrmTel telephone" name="msg.phone">
+                </td>
+                <td height="32" align="center" bgcolor="#FFFFFF">现阶段学历</td>
+                <td height="32" align="center" bgcolor="#FFFFFF"><select name="msg.field5"
+                                                                         style="background-color:#fff; width:160px; height:26px; line-height:26px;">
+                    <option>无</option>
+                    <option>初中</option>
+                    <option>高中</option>
+                    <option>中专</option>
+                    <option>大专</option>
+                    <option>本科</option>
+                    <option>其他</option>
+                </select></td>
+                <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center" bgcolor="#FFFFFF"><p>地区</p></td>
+                <td align="center" bgcolor="#FFFFFF"><select
+                    style="background-color:#fff; width:160px; height:26px; line-height:26px;">
+                    <option>重庆</option>
+                    <option>长沙</option>
+                    <option>吉林</option>
+                    <option>河南</option>
+                    <option>广州</option>
+                    <option>深圳</option>
+                    <option>杭州</option>
+                    <option>南京</option>
+                </select></td>
+                <td align="center" bgcolor="#FFFFFF"><p>团队名称</p></td>
+                <td align="center" bgcolor="#FFFFFF"><input type="text"
+                                                            style="background-color:#fff;width:160px;height:20px; line-height:20px;"
+                                                            value="长城汽车集团"/></td>
+                <td width="169" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="5" align="center" bgcolor="#FFFFFF">
+                    <input style="width:140px;height:30px;background:#ae000a;color:#fff;line-height:30px;cursor:pointer;outline:none;border:0;text-align:center;" class="submit" value="立即申请" type="button"/>
+                </td>
+            </tr>
+            <tr>
+                <td height="40" colspan="5" align="center" bgcolor="#313131"><span
+                    style="color:#fff;font-size:24px;font-weight:bold;">团报部分学员名单</span></td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">报名学员姓名</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">手机号</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">身份证后四位</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">是否缴费</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">程俊</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">155****0920</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">**************727X</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">是</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">何伟</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">155****8887</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">**************5012</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">是</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">霍远秦</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">131****7700</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">**************2598</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">是</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">江良</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">131****2288</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">**************6575</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">是</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">李征</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">188****8501</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">**************2512</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">是</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">闫宇</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">188****3847</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">**************8137</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">是</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">聂剑平</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">156****9760</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">**************311X</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">是</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="2" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+                <td height="40" align="center" bgcolor="#FFFFFF">&nbsp;</td>
+            </tr>
+            <tr>
+                <td height="40" colspan="5" align="center" bgcolor="#FFFFFF"><span
+                    style="width:140px;height:30px;line-height:30px;background:#484848;color:#fff;padding:3px 6px;cursor:pointer;">上一页</span>
+                    第10页/共10页 <span
+                        style="width:140px;height:30px;line-height:30px;background:#9e9e9e;color:#fff;padding:3px 6px;cursor:pointer;">下一页</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+<div class="bkqr page4">
+    <div class="shuoming2">
+        <p style="font-family:'微软雅黑'; font-size:24px; color:#000; line-height:40px; font-weight:bold; text-align:center;">
+            简学网消防课程团报项目</p>
+        <p style="font-family:'微软雅黑'; font-size:24px; color:#000; font-weight:bold;"></p>
+        <hr/>
+        <p></p>
+        <p>
+            长城汽车集团成立时间久远，实力雄厚，公司下属控股子公司30余家，员工20000多人。每年集团内部员工有1/2到简学网参加消防课程。因此长城汽车集团特与简学网签署了长期合作协议，定期输送员工到简学网进行能力提升。</p>
+        <p>具体要求如下：</p>
+        <p>1、简学网承诺凡是长城汽车集团的员工参加消防课程可采用团报的形式进行，一次团报人数上限为100人，费用收取采用7折优惠价格。<br/>&nbsp;&nbsp;2、本次团报截止日期为2019年<span class="month"></span>月<span class="day"></span>日21:00。</p>
+        <p></p>
+    </div>
+</div>
+<div class="tc">
+    <h3>申请成功!请于2019年<span class="month"></span>月<span class="day"></span>日21:00之前到达分校完成现场确认</h3>
+    <p class="bm_name">姓名：<span></span></p>
+    <p class="bm_tel">手机号：<span></span></p>
+    <p class="bm_id">身份证：<span></span></p>
+    <span class="confirm">确认</span>
+    <span class="close">X</span>
+</div>
+</body>
+</html>
+<script>
+    $(".tc span").click(function () {
+        $(".tc").css("display", "none");
+    });
+    $(".p1").click(function () {
+
+        $(".page1").css("display", "block");
+
+        $(".page2").css("display", "none");
+
+        $(".page3").css("display", "none");
+
+        $(".page4").css("display", "none");
+        $(".p1").css("background", "#545454");
+        $(".p2").css("background", "#222");
+        $(".p4").css("background", "#222");
+        $(".p3").css("background", "#222");
+
+    });
+    $(".p2").click(function () {
+
+        $(".page2").css("display", "block");
+
+        $(".page1").css("display", "none");
+
+        $(".page3").css("display", "none");
+
+        $(".page4").css("display", "none");
+        $(".p2").css("background", "#545454");
+        $(".p1").css("background", "#222");
+        $(".p4").css("background", "#222");
+        $(".p3").css("background", "#222");
+    });
+    $(".p3").click(function () {
+
+        $(".page3").css("display", "block");
+
+        $(".page2").css("display", "none");
+
+        $(".page1").css("display", "none");
+
+        $(".page4").css("display", "none");
+        $(".p3").css("background", "#545454");
+        $(".p1").css("background", "#222");
+        $(".p2").css("background", "#222");
+        $(".p4").css("background", "#222");
+    });
+    $(".p4").click(function () {
+
+        $(".page4").css("display", "block");
+
+        $(".page1").css("display", "none");
+
+        $(".page2").css("display", "none");
+
+        $(".page3").css("display", "none");
+        $(".p4").css("background", "#545454");
+        $(".p1").css("background", "#222");
+        $(".p2").css("background", "#222");
+        $(".p3").css("background", "#222");
+    });
+
+
+
+</script>
+<script type="text/javascript">
+    var username = '',
+        telephone = '',
+        idcard = '';
+    $(function() {
+
+        $('.submit').click(function() {
+            username = $('.username').val();
+            telephone = $('.telephone').val();
+            idcard = $('.idcard').val();
+            console.log(idcard)
+            if (!username) {
+                alert('请输入您的姓名');
+                return
+            }else if (!idcard) {
+                alert('请输入您的身份证');
+                return
+            }else if (!telephone) {
+                alert('请输入您的手机号');
+                return
+            }else if (!(/^(((13[0-9]{1})|(16[0-9]{1})|(19[0-9]{1})|(15([0-9]{1}))|(18[0-9]{1})|(17+(0|1|2|4|5|3|6|7|8))|(14+(5|6|7|8|9)))+\d{8})$/.test(telephone))) {
+                alert('请输入正确的手机号');
+                return
+            }
+            $('.bm_name span').html(username);
+            $('.bm_tel span').html(telephone);
+            $('.bm_id span').html(idcard);
+            var t = setTimeout(function () {
+                $('.tc').show();
+            },1000)
+        });
+    });
+</script>
