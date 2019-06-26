@@ -1,4 +1,4 @@
-function public(dom,json){
+﻿function public(dom,json){
     this.dom = dom;
     this.defaults = {
         url: window.location.href  || '',
@@ -74,6 +74,7 @@ public.prototype.post=function(fn){
                 alert("此手机号已提交过了！");
             } else {
                 alert("提交失败！");
+console.log("error");
             }
         }
     });
