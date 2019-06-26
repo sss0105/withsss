@@ -13,6 +13,7 @@ public.prototype.post=function(fn){
     var obj = this.json;
     var url = obj.url;
     var area = obj.area;
+    console.log("新加测试");
     var sentence = obj.sentence;
     var type = obj.type;
     var dom = this.dom;
